@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
 import { evaluate } from 'mathjs';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import * as calcs from '../../store/calcs.js';
-import Disclaimer from '@components/Disclaimer';
-import Help from '@components/Help';
-import SavedCalcs from '@components/SavedCalcs';
-import common from '../../styles/common.css';
+import * as calcs from '~/store/calcs.js';
+import Disclaimer from '~/components/Disclaimer';
+import Help from '~/components/Help';
+import SavedCalcs from '~/components/SavedCalcs';
 import styles from './index.css';
 
 /**
@@ -30,7 +29,7 @@ const parseExp = (exp) => {
   return `${result}`;
 };
 
-export default function App(props) {
+export default function App() {
   const inputs = [useRef(), useRef(), useRef(), useRef()];
   
   const selected = calcs.select.selected();
@@ -108,14 +107,14 @@ export default function App(props) {
   };
 
   return (
-    <div class={common.p30}>
-      <h1 class={`${styles.heading} ${common.mb20}`}><img class={styles.logo} src="/assets/logo.svg" /></h1>
+    <div class="p30">
+      <h1 class={`${styles.heading} mb20`}><img class={styles.logo} src="/assets/logo.svg" /></h1>
 
       <Help />
       <Disclaimer />
       
-      <div class={`${styles.container} ${common.mb20}`}>
-        <main class={`${styles.inputs} ${common.p20} ${common.bggray}`}>
+      <div class={`${styles.container} mb20`}>
+        <main class={`${styles.inputs} p20 bggray`}>
             <input
               class={styles.input}
               onInput={(e) => setExp0(e.target.value)}
@@ -125,7 +124,7 @@ export default function App(props) {
               value={exp0}
             />
             <input
-              class={`${styles.input} ${common.hideXsDown}`}
+              class={`${styles.input} hideXsDown`}
               onInput={(e) => setExp1(e.target.value)}
               onKeydown={checkForLineChange(1)}
               ref={inputs[1]}
@@ -133,7 +132,7 @@ export default function App(props) {
               value={exp1}
             />
             <input
-              class={`${styles.input} ${common.hideXsDown}`}
+              class={`${styles.input} hideXsDown`}
               onInput={(e) => setExp2(e.target.value)}
               onKeydown={checkForLineChange(2)}
               ref={inputs[2]}
@@ -141,7 +140,7 @@ export default function App(props) {
               value={exp2}
             />
             <input
-              class={`${styles.input} ${common.hideXsDown}`}
+              class={`${styles.input} hideXsDown`}
               onInput={(e) => setExp3(e.target.value)}
               onKeydown={checkForLineChange(3)}
           
@@ -150,23 +149,23 @@ export default function App(props) {
               value={exp3}
             />
         </main>
-        <aside class={`${styles.results} ${common.p20}`}>
+        <aside class={`${styles.results} p20`}>
           <CopyToClipboard text={res0} onCopy={() => alert(`${res0} copied to clipboard!`)}>
             <div class={`${styles.result}`}>{res0}</div>
           </CopyToClipboard>
           <CopyToClipboard text={res1} onCopy={() => alert(`${res1} copied to clipboard!`)}>
-            <div class={`${styles.result} ${common.hideXsDown}`}>{res1}</div>
+            <div class={`${styles.result} hideXsDown`}>{res1}</div>
           </CopyToClipboard>
           <CopyToClipboard text={res2} onCopy={() => alert(`${res2} copied to clipboard!`)}>
-            <div class={`${styles.result} ${common.hideXsDown}`}>{res2}</div>
+            <div class={`${styles.result} hideXsDown`}>{res2}</div>
           </CopyToClipboard>
           <CopyToClipboard text={res3} onCopy={() => alert(`${res3} copied to clipboard!`)}>
-            <div class={`${styles.result} ${common.hideXsDown}`}>{res3}</div>
+            <div class={`${styles.result} hideXsDown`}>{res3}</div>
           </CopyToClipboard>
         </aside>
       </div>
 
-      <div class={common.mb40}>
+      <div class="mb40">
         <button class={styles.saveBtn} onClick={saveCalc}>Save Calc</button>
       </div>
 

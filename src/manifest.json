@@ -1,0 +1,16 @@
+{
+  "name": "+x+calc",
+  "short_name": "+x+calc",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#212223",
+  "theme_color": "#66bb99",
+  "icons": [
+    {
+      "src": "/assets/txtcalc.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

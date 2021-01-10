@@ -1,5 +1,4 @@
 import { useState } from 'preact/hooks';
-import common from '../../styles/common.css';
 import styles from './index.css';
 
 export default function Popup({
@@ -18,8 +17,8 @@ export default function Popup({
 
       <div class={`${styles.overlay} ${isShowing ? styles.show : ''}`}>
         <button class={styles.x} onClick={hide}>x</button>
-        <div class={`${common.p30} ${styles.scroll}`}>
-          <div class={common.center}>
+        <div class={`p30 ${styles.scroll}`}>
+          <div class="center">
             {children}
           </div>
         </div>

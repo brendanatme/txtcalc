@@ -2,7 +2,7 @@
 
 Code repository for the [txtcalc experiment](https://txtcalc.brendanm.dev)
 
-Built on top of PWA cafe
+Built using Preact
 
 # Installation
 
@@ -13,7 +13,7 @@ $ npm install
 # Development
 
 ```bash
-$ npm run watch
+$ npm run dev
 ```
 
 # Deployment
@@ -27,5 +27,5 @@ $ npm run build
 Prod server
 
 ```bash
-$ npm start
+$ npm run serve
 ```

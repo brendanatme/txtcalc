@@ -5,7 +5,7 @@ const CALCS_KEY = 'calcs';
 
 const ogCalcs = {
   itemMap: {
-    '2': {
+    2: {
       createdAt: 2,
       exp0: '(4 + 1) * 3^2 / 0.9',
       exp1: '1 mile * 2 km',
@@ -14,7 +14,7 @@ const ogCalcs = {
       id: '2',
       name: 'Sample',
     },
-    '1': {
+    1: {
       createdAt: 1,
       exp0: '',
       exp1: '',
@@ -24,7 +24,7 @@ const ogCalcs = {
       name: 'Empty',
     },
   },
-  selectedId: '2',
+  selectedId: 2,
   size: 2,
 };
 

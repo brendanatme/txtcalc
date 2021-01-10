@@ -1,3 +1,16 @@
-export const get = (key) => JSON.parse(localStorage.getItem(key));
-export const set = (key, value) => localStorage.setItem(key, JSON.stringify(value));
-export const del = (key) => localStorage.removeItem(key);
+
+// satisfy SSR
+const storage = typeof window !== 'undefined' ? window.localStorage : {
+  getItem() {},
+  setItem() {},
+  removeItem() {},
+};
+
+const json = typeof window !== 'undefined' ? window.JSON : {
+  parse() {},
+  stringify() {},
+};
+
+export const get = (key) => json.parse(storage.getItem(key));
+export const set = (key, value) => storage.setItem(key, json.stringify(value));
+export const del = (key) => storage.removeItem(key);
