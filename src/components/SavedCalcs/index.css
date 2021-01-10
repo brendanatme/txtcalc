@@ -1,0 +1,37 @@
+.calc {
+  appearance: none;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  outline: none !important;
+  padding: 30px 50px 30px 30px;
+  position: relative;
+}
+
+.calc.selected {
+  background: #4e846d;
+}
+
+.calc:hover,
+.calc:focus {
+  background: #66bb99;
+}
+
+.del {
+  background: #ddd;
+  color: #222;
+  cursor: pointer;
+  right: 0;
+  padding: 7px 10px;
+  position: absolute;
+  top: 0;
+}
+
+.del:hover,
+.del:focus {
+  background: #bb6699;
+}

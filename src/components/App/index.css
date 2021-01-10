@@ -1,0 +1,77 @@
+.logo {
+  left: -18px;
+  position: relative;
+  top: -20px;
+  width: 200px;
+}
+
+@media only screen and (min-width: 600px) {
+  .logo {
+    left: -30px;
+    top: -20px;
+    width: 400px;
+  }
+}
+
+.container {
+  overflow: hidden;
+  position: relative;
+}
+
+.inputs {
+  border-radius: 4px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .inputs {
+    float: left;
+    width: 60%;
+  }
+}
+
+.input {
+  background: transparent;
+  border: 0;
+  display: block;
+  color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .results {
+    float: right;
+    width: 30%;
+  }
+}
+
+.result {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  height: 37px;
+  padding: 7px 0;
+}
+
+.saveBtn {
+  appearance: none;
+  background: #ddd;
+  border: 0;
+  border-radius: 0;
+  color: #222;
+  cursor: pointer;
+  font-family: inherit;
+  outline: !important;
+  padding: 15px 20px;
+}
+
+.saveBtn:hover,
+.saveBtn:focus {
+  background: #66bb99;
+  outline: none;
+}

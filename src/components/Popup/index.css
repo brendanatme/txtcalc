@@ -1,0 +1,50 @@
+.toggle {
+  display: block;
+  position: fixed;
+  color: #66bb99;
+}
+
+.toggle.topRight {
+  right: 20px;
+  top: 20px;
+}
+
+.toggle.bottomRight {
+  bottom: 20px;
+  right: 20px;
+}
+
+.overlay {
+  background-color: rgba(0,0,0,.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  visibility: hidden;
+  width: 100%;
+  z-index: 100;
+}
+
+.overlay.show {
+  visibility: visible;
+}
+
+.x {
+  appearance: none;
+  border: 0;
+  background: #ddd;
+  color: #222;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 50px;
+  right: 0;
+  outline: 0;
+  padding: 0px 15px;
+  position: absolute;
+  top: 0;
+}
+
+.scroll {
+  overflow-y: scroll;
+  height: 100%;
+}
